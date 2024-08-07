@@ -1,0 +1,25 @@
+USE jugos;
+SELECT * FROM tabla_de_vendedores;
+ALTER TABLE tabla_de_vendedores ADD (FECHA_ADMISION DATE);
+ALTER TABLE tabla_de_vendedores ADD (DE_VACACIONES BIT);
+ALTER TABLE tabla_de_vendedores ADD PRIMARY KEY(MATRICULA);
+
+INSERT INTO tabla_de_vendedores(
+MATRICULA, 
+NOMBRE, 
+PORCENTAJE_COMISION, 
+FECHA_ADMISION,
+DE_VACACIONES) VALUES('00237', 'Roberta Martins', 0.11, '2017-03-18', 1);
+
+UPDATE tabla_de_vendedores SET FECHA_ADMISION = '2014-08-15' WHERE MATRICULA = '00235';
+UPDATE tabla_de_vendedores SET DE_VACACIONES = 0 WHERE MATRICULA = '00235';
+UPDATE tabla_de_vendedores SET DE_VACACIONES = 1, PORCENTAJE_COMISION = 0.8, NOMBRE = 'Claudia Morais', FECHA_ADMISION = '2013-09-17' WHERE MATRICULA = '00236';
+
+UPDATE tabla_de_vendedores SET NOMBRE = 'Pericles Alves' WHERE MATRICULA = '00238';
+INSERT INTO tabla_de_vendedores(
+MATRICULA, 
+NOMBRE, 
+PORCENTAJE_COMISION, 
+FECHA_ADMISION,
+DE_VACACIONES) VALUES('00238', 'Péricles Alves', 0.11, '2016-08-21', 0);
+SELECT * FROM tabla_de_vendedores;

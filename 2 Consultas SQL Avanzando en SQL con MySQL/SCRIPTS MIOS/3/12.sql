@@ -1,0 +1,28 @@
+SELECT * FROM facturas;
+SELECT DNI, NOMBRE, DIRECCION_1, DIRECCION_2, BARRIO, CIUDAD, 
+ESTADO, CP, FECHA_DE_NACIMIENTO, EDAD, SEXO, 
+LIMITE_DE_CREDITO, VOLUMEN_DE_COMPRA, PRIMERA_COMPRA
+FROM tabla_de_clientes;
+SELECT DNI AS ID, NOMBRE AS CLIENTE, EDAD, SEXO, 
+LIMITE_DE_CREDITO AS CREDITO
+FROM tabla_de_clientes;
+
+SELECT * FROM tabla_de_productos;
+USE jugos_ventas;
+
+SELECT CODIGO_DEL_PRODUCTO AS codigo,
+NOMBRE_DEL_PRODUCTO AS Producto, 
+TAMANO AS Presentacion, SABOR AS Sabor,
+PRECIO_DE_LISTA AS Precio FROM tabla_de_productos;
+
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Naranja';
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Uva';
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Mango';
+SELECT * FROM tabla_de_productos WHERE NOMBRE_DEL_PRODUCTO = 'Verano';
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA > 5;
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA BETWEEN 16 AND 16.2;
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA BETWEEN 16 AND 16.1;
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA >= 16;
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA <= 16;
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA > 16;
+SELECT * FROM tabla_de_productos WHERE PRECIO_DE_LISTA = 16.01;

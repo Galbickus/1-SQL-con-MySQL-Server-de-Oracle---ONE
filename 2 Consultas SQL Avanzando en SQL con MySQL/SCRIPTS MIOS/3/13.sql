@@ -1,0 +1,15 @@
+USE jugos_ventas;
+SELECT * FROM tabla_de_productos;
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Mango' AND TAMANO = '470 ml';
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Mango' OR TAMANO = '470 ml';
+SELECT * FROM tabla_de_productos WHERE NOT(SABOR = 'Mango') OR TAMANO = '470 ml';
+SELECT * FROM tabla_de_productos WHERE NOT(SABOR = 'Mango' AND TAMANO = '470 ml');
+SELECT * FROM tabla_de_productos WHERE NOT(SABOR = 'Mango' OR TAMANO = '470 ml');
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Mango' AND NOT (TAMANO = '470 ml');
+SELECT * FROM tabla_de_productos WHERE SABOR IN ('Mango', 'Uva');
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Uva' OR  SABOR = 'Mango';
+SELECT * FROM tabla_de_productos WHERE SABOR = 'Uva';
+SELECT * FROM tabla_de_clientes WHERE CIUDAD IN ('CIUDAD DE MEXICO', 'GUADALAJARA');
+SELECT * FROM tabla_de_clientes WHERE CIUDAD IN ('CIUDAD DE MEXICO', 'GUADALAJARA') AND edad > 21;
+SELECT * FROM tabla_de_clientes WHERE CIUDAD IN ('CIUDAD DE MEXICO', 'GUADALAJARA') AND edad BETWEEN 21 AND 25;
+SELECT * FROM tabla_de_clientes WHERE CIUDAD IN ('CIUDAD DE MEXICO', 'GUADALAJARA') AND (edad BETWEEN 20 AND 26);

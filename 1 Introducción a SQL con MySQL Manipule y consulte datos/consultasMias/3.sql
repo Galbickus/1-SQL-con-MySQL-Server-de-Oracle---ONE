@@ -1,0 +1,4 @@
+CREATE TABLE TABLA_DE_VENDEDORES (
+    MATRICULA varchar(5), 
+    NOMBRE varchar(100), 
+    PORCENTAJE_COMISION float);

@@ -1,0 +1,13 @@
+USE jugos;
+
+UPDATE tabla_de_vendedores SET PORCENTAJE_COMISION = 1.1 WHERE MATRICULA = 00236; 
+UPDATE tabla_de_vendedores SET NOMBRE = 'Joan Geraldo de la Fonseca Junior' WHERE MATRICULA = 00233;
+DELETE FROM tabla_de_vendedores WHERE MATRICULA = 00233;
+
+INSERT INTO TABLA_DE_VENDEDORES
+(MATRICULA, NOMBRE, PORCENTAJE_COMISION)
+VALUES
+('00233', 'Joan Geraldo de la Fonseca Junior', 0.10);
+
+UPDATE tabla_de_vendedores SET PORCENTAJE_COMISION = 0.11 WHERE MATRICULA = 00236; 
+SELECT * FROM tabla_de_vendedores;
